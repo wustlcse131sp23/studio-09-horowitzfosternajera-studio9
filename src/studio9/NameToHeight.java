@@ -19,9 +19,23 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		Map<String, Integer> heightMap = new HashMap<>();
 
-		// FIXME
-		throw new NotYetImplementedException();
+		heightMap.put("Zaira", 63);
+		heightMap.put("Simon", 70);
+		heightMap.put("Zoe", 62);
 
+		while (true) {
+			System.out.print("Please enter a name: ");
+			String name = in.nextLine();
+			if (heightMap.containsKey(name)) {
+				int height = heightMap.get(name);
+				System.out.println(name + " is " + height + " inches tall");
+				
+			} 
+			else {
+				System.out.println("Not found!");
+			}
+		}
 	}
 }
